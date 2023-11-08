@@ -9,3 +9,8 @@ export default defineComponent({
   name: "App",
 });
 </script>
+<style>
+body {
+  margin-bottom: 2rem;
+}
+</style>
