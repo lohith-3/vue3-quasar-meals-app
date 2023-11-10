@@ -1,7 +1,11 @@
 <template>
   <div class="col-xs-12 col-sm-4 zoom">
     <q-card flat bordered class="bx__shadow">
-      <q-img :src="meal.imgUrl" class="img cursor__p" />
+      <q-img
+        :src="meal.imgUrl"
+        class="img cursor__p"
+        @click="navigateToMealDetails(meal)"
+      />
 
       <q-card-section>
         <div class="text-h5 q-mt-sm q-mb-xs">
@@ -27,6 +31,7 @@
 
 <script>
 import { truncateWords } from "../filters/index";
+import { useRouter } from "vue-router";
 export default {
   props: {
     meal: {
@@ -35,13 +40,20 @@ export default {
     },
   },
   setup() {
+    const router = useRouter();
+
     function navigateToYtUrl(url) {
       window.open(url, "_blank", "noreferrer");
+    }
+
+    function navigateToMealDetails(val) {
+      router.push({ name: "meal-details", params: { mealId: val.id } });
     }
 
     return {
       truncateWords,
       navigateToYtUrl,
+      navigateToMealDetails,
     };
   },
 };
