@@ -20,24 +20,6 @@
             class="p-px-sm text-black text-weight-regular text__spacing_dec"
             >Meals By Ingredients</router-link
           >
-          <!-- <q-btn
-            class="text-capitalize letter-spacing"
-            flat
-            color="black"
-            label="Search Meals"
-          />
-          <q-btn
-            class="text-capitalize letter-spacing"
-            flat
-            color="black"
-            label="Meals By Letter"
-          />
-          <q-btn
-            class="text-capitalize letter-spacing"
-            flat
-            color="black"
-            label="Meals By Ingredients"
-          /> -->
         </div>
       </q-toolbar>
     </q-header>
@@ -48,14 +30,10 @@
   </q-layout>
 </template>
 <script>
-import { ref } from "vue";
 export default {
+  components: {},
   setup() {
-    const message = ref("Hello world");
-
-    return {
-      message,
-    };
+    return {};
   },
 };
 </script>

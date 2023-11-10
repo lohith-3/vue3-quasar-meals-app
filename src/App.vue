@@ -11,6 +11,5 @@ export default defineComponent({
 </script>
 <style>
 body {
-  margin-bottom: 2rem;
 }
 </style>

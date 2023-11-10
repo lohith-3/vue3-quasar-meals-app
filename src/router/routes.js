@@ -10,7 +10,13 @@ const routes = [
     children: [
       {
         path: "",
+        name: "random-meals",
         component: () => import("pages/RandomMeals.vue"),
+      },
+      {
+        path: ":mealId",
+        name: "meal-details",
+        component: () => import("pages/MealDetails.vue"),
       },
     ],
   },
